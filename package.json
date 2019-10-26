@@ -4,7 +4,11 @@
   "description": "An app for sharing recipes using Node.js, Express, MongoDB and Vue.js",
   "main": "index.js",
   "scripts": {
-    "dev": "env-cmd -f .env nodemon index.js"
+    "start": "node index.js",
+    "client-install": "npm install --prefix client",
+    "client": "npm run serve --prefix client",
+    "server": "nodemon index.js",
+    "dev": "env-cmd -f .env concurrently \"nodemon index.js\" \"npm run serve --prefix client\""
   },
   "author": "Petar Karagenov",
   "license": "ISC",
