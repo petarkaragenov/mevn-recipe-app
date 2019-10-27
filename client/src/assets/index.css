@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+}
+
+.mr {
+    margin-right: .5rem;
+}
+
+.ml {
+    margin-left: .5rem;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 40px;
+}
+
+.card, .card_plus {
+    height: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card__content {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+.card__content:hover .card__overlay {
+    opacity: 1;
+}
+
+.card__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.card_plus {
+    border: 1px dotted #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.card_plus:hover {
+    box-shadow: 0 0 8px 4px rgba(0,0,0,0.3);
+    background: #ddd;
+}
+
+.ingredients-list {
+    font-size: 1.3rem;
+    font-weight: italic;
+    list-style-type: none;
+}
+
+.vue-lb-info {
+    height: auto;
+    padding: 0.8em;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    
+}
+
+.column-wide {
+    flex: 5;
+    display: flex;
+}
+
+.column-slim {
+    flex: 3;
+    display: flex;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.form-field label, .form-field .form-input  {
+    display: block;
+    margin: .4rem 0;
+}
+
+.form-field label {
+    font-size: 14px;
+    color: #666;
+}
+
+.form-field .form-input {
+    padding: .5rem;
+    font-size: 1.125rem;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1px rgba(0,0,0,0.3);
+    transition: all .4s;
+}
+
+.form-field .form-input:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(0,0,0,0.6);
+}
+

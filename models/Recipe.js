@@ -13,7 +13,7 @@ const RecipeSchema = mongoose.Schema({
         required: true,
         validate: {
             validator(v) {
-                return v.length >=1 && v.length <= 7 
+                return v.length >=2 && v.length <= 7 
             },
             message(props) {
                 return 'Ooops! Seems like you just missed Heaven...'
@@ -33,18 +33,6 @@ const RecipeSchema = mongoose.Schema({
         }
     },
     ingredients: {
-        type: [String],
-        required: true,
-        validate: {
-            validator(v) {
-                return v.length >= 1
-            },
-            message() {
-                return 'If you don\'t show us the way, how do we follow you?'
-            }
-        }
-    },
-    tags: {
         type: [String],
         required: true,
         validate: {
